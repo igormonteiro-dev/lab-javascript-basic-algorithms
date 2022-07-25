@@ -64,3 +64,34 @@ function countOccurences(string, word) {
 }
 
 console.log(countOccurences(texteLorem, "et"));
+
+// BONUS 2
+
+let phraseToCheck = "stack cats";
+
+// function to reverse the value
+function reverseWord(str) {
+  // variable holds reverse string
+  let reversed = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
+  // return reverse string
+  return reversed;
+}
+
+//  function checking string is palindrome or not
+function ValueIsPalindrome(str) {
+  reverse_str = reverseWord(str);
+
+  //  condition checking if reverse str is
+  // same as string it is palindrome
+  // else not a palindrome
+  if (reverse_str.replace(/\s+/g, "") === str.replace(/\s+/g, "")) {
+    console.log("passed string is palindrome ");
+  } else {
+    console.log("passed string is not palindrome");
+  }
+}
+
+ValueIsPalindrome(phraseToCheck);
